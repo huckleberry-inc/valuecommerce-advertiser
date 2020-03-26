@@ -1,6 +1,6 @@
 {
   "name": "@yosemitelab/valuecommerce-advertiser",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "dist/index.js",
   "description": "ValueCommerce node client for advertiser",
   "repository": "https://github.com/yosemitelab/valuecommerce-advertiser",
@@ -16,7 +16,6 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@yosemitelab/valuecommerce-advertiser": "^0.0.5",
     "node-fetch": "^2.6.0",
     "query-string": "^6.11.1"
   }
