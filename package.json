@@ -1,6 +1,6 @@
 {
   "name": "@yosemitelab/valuecommerce-advertiser",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/index.js",
   "description": "ValueCommerce node client for advertiser",
   "repository": "https://github.com/yosemitelab/valuecommerce-advertiser",
