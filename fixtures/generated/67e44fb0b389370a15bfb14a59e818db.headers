@@ -1,7 +1,7 @@
 {
   "statusCode": 200,
   "headers": {
-    "date": "Wed, 17 Jun 2020 06:50:32 GMT",
+    "date": "Fri, 19 Jun 2020 03:20:22 GMT",
     "server": "Apache",
     "www-authenticate": "Bearer realm='valuecommerce_api_service'",
     "x-content-type-options": "nosniff",
@@ -11,7 +11,7 @@
     "content-type": "application/json;charset=utf-8"
   },
   "url": "https://api.valuecommerce.com/auth/v1/merchant/token/?grant_type=client_credentials",
-  "time": 1361,
+  "time": 300,
   "request": {
     "method": "GET",
     "headers": {

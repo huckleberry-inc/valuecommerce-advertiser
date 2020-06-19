@@ -103,10 +103,14 @@ export class Client {
     );
   }
 
-  // TODO: add params option
-  async transaction(bearerToken: string): Promise<TransactionResponse> {
+  async transaction(
+    bearerToken: string,
+    option: any = {}, // TODO:
+  ): Promise<TransactionResponse> {
+    const params = stringify(option);
+
     return this.request<TransactionResponse>(
-      'https://api.valuecommerce.com/report/v1/merchant/transaction/',
+      `https://api.valuecommerce.com/report/v1/merchant/transaction/?${params}`,
       {
         headers: {
           Authorization: `Bearer ${bearerToken}`,
@@ -148,8 +152,8 @@ export class Client {
 
   // TODO: change any type
   // eslint-disable-next-line class-methods-use-this
-  private async request<T>(url: string, options: any) {
-    const response = await fetch(url, options).catch(() => {
+  private async request<T>(url: string, option: any) {
+    const response = await fetch(url, option).catch(() => {
       // TODO: error handling
 
       throw new Error();
