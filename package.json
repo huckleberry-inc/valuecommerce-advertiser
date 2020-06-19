@@ -1,9 +1,15 @@
 {
-  "name": "@yosemitelab/valuecommerce-advertiser",
-  "version": "0.0.7",
-  "main": "dist/index.js",
+  "name": "@huckleberry-inc/valuecommerce-advertiser",
+  "version": "0.1.0",
   "description": "ValueCommerce node client for advertiser",
-  "repository": "https://github.com/yosemitelab/valuecommerce-advertiser",
+  "author": "Huckleberry, inc. <dev@huckleberry-inc.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/huckleberry-inc/valuecommerce-advertiser",
+  "bugs": {
+    "url": "https://github.com/huckleberry-inc/valuecommerce-advertiser/issues"
+  },
+  "repository": "https://github.com/huckleberry-inc/valuecommerce-advertiser",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
