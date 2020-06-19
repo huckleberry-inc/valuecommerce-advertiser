@@ -6,7 +6,7 @@ const clientKey = 'CLIENT_KEY';
 const clientSecret = 'CLIENT_SECRET';
 
 // Sample values
-const bearerToken = '447b46e0-c38d-4bfa-a2de-9944d6d02ceb';
+const bearerToken = '69449c99-d35e-4e9b-b2ae-9ab21b4d00d3';
 const orderId = 'vc_72da64e066f07_Fw3pMB7p41JBsKxl8xGi';
 
 const client = new Client({ clientKey, clientSecret });
@@ -18,7 +18,12 @@ test('returns token', async () => {
 });
 
 test('returns transactions', async () => {
-  const transaction = await client.transaction(bearerToken);
+  const transaction = await client.transaction(bearerToken, {
+    limit: 1000,
+    offset: 0,
+    from_date: '2020-04-01',
+    to_date: '2020-06-19',
+  });
 
   const {
     affilId,

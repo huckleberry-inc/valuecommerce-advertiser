@@ -1,17 +1,17 @@
 {
   "statusCode": 200,
   "headers": {
-    "date": "Wed, 17 Jun 2020 06:50:33 GMT",
+    "date": "Fri, 19 Jun 2020 03:20:22 GMT",
     "server": "Apache",
     "www-authenticate": "Bearer realm='valuecommerce_api_service'",
     "x-content-type-options": "nosniff",
-    "content-length": "2862",
+    "content-length": "10312",
     "status": "200 OK",
     "connection": "close",
     "content-type": "application/json;charset=utf-8"
   },
-  "url": "https://api.valuecommerce.com/report/v1/merchant/transaction/",
-  "time": 384,
+  "url": "https://api.valuecommerce.com/report/v1/merchant/transaction/?from_date=2020-04-01&limit=1000&offset=0&to_date=2020-06-19",
+  "time": 312,
   "request": {
     "method": "GET",
     "headers": {
