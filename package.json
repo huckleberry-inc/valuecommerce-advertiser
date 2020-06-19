@@ -18,5 +18,16 @@
   "dependencies": {
     "node-fetch": "^2.6.0",
     "query-string": "^6.11.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
