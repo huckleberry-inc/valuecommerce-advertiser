@@ -49,7 +49,7 @@ type TransactionResponse = {
       orderDate: string;
       orderId: string;
       programName: string;
-      upDate: string;
+      updDate: string;
       userId: string | null; // TODO
     }[];
   };
