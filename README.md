@@ -1,6 +1,7 @@
 # Welcome to @huckleberry-inc/valuecommerce-advertiser 👋
 [![Version](https://img.shields.io/npm/v/@huckleberry-inc/valuecommerce-advertiser.svg)](https://www.npmjs.com/package/@huckleberry-inc/valuecommerce-advertiser)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
+![build and test](https://github.com/huckleberry-inc/valuecommerce-advertiser/workflows/build%20and%20test/badge.svg)
 
 > ValueCommerce node client for advertiser
 
