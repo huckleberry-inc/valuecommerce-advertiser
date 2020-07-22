@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import fetch, { RequestInit } from 'node-fetch';
 import { stringify } from 'query-string';
 
 type TokenResponse = {
@@ -92,7 +92,6 @@ export class Client {
     const accessToken = Buffer.from(
       `${this.clientKey}|${this.clientSecret}`,
     ).toString('base64');
-
     const params = stringify({
       grant_type: 'client_credentials',
     });
@@ -130,7 +129,7 @@ export class Client {
         list: Array.from(statusSet).map(([orderId, status]) => {
           return {
             id: orderId,
-            st: status ? 'a' : 'c', // "a" means "accept", "c" means "cancel"
+            st: status ? 'a' : 'c', // "a" means "accept", "c" means "cancel". Ref: https://pub-docs.valuecommerce.ne.jp/docs/ec-76-order-status-api/#%E3%83%9A%E3%82%A4%E3%83%AD%E3%83%BC%E3%83%89
           };
         }),
       }),
@@ -150,9 +149,8 @@ export class Client {
     );
   }
 
-  // TODO: change any type
   // eslint-disable-next-line class-methods-use-this
-  private async request<T>(url: string, option: any) {
+  private async request<T>(url: string, option: RequestInit) {
     const response = await fetch(url, option).catch(() => {
       // TODO: error handling
 
