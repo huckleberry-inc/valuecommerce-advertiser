@@ -20,11 +20,11 @@ const client = new Client({ clientKey, clientSecret });
   const token = await client.token();
 
   // Fetch transactions
-  const transactions = await client.transaction(token.bearer_token);
+  const transactions = await client.transaction(token.resultSet.rowData.bearer_token);
 
   // Update transaction's status
   const statusMap = new Map<string, boolean>();
-  statusMap.set(transactions[0].orderId, false);
+  statusMap.set(transactions[0].resultSet.rowData.orderId, false);
 
   await client.transactionStatus(
     bearerToken,
@@ -43,7 +43,7 @@ yarn
 ## Run tests
 
 ```sh
-yarn run test
+VCR_MODE=cache yarn test 
 ```
 
 ## Author
