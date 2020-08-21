@@ -19,6 +19,8 @@ type TokenResponse = {
   };
 };
 
+export type ApprovalStatus = 'P' | 'C' | 'A' | 'I';
+
 type TransactionResponse = {
   resultSet: {
     responseInfo: {
@@ -38,7 +40,7 @@ type TransactionResponse = {
       affiliateSite: string;
       approvalDate: string | null; // TODO
       approvalDeadline: string;
-      approvalStatus: 'P'; // TODO
+      approvalStatus: ApprovalStatus;
       clickDate: string;
       custEmail: string;
       custName: string;
@@ -46,7 +48,7 @@ type TransactionResponse = {
       customerStatus: string | null; // TODO
       itemPriceTotal: string;
       itemQuantity: string;
-      orderDate: string;
+      orderDate: string; // JST yyyy-mm-dd hh:ii:ss
       orderId: string;
       programName: string;
       updDate: string;

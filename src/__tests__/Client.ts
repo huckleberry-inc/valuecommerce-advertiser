@@ -32,7 +32,7 @@ test('returns transactions', async () => {
     // affilPaymentTax,
     // affiliateSite,
     // approvalDate,
-    // approvalDeadline,
+    approvalDeadline,
     // approvalStatus,
     // clickDate,
     // custEmail,
@@ -41,13 +41,15 @@ test('returns transactions', async () => {
     // customerStatus,
     // itemPriceTotal,
     // itemQuantity,
-    // orderDate,
+    orderDate,
     // orderId,
     // programName,
     // upDate,
     // userId,
   } = transaction.resultSet.rowData[0];
 
+  expect(approvalDeadline).toBe('44');
+  expect(orderDate).toBe('2020-06-18 19:04:31');
   expect(affilId).toBe('3479028');
 });
 

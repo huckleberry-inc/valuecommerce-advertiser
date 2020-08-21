@@ -1,3 +1,3 @@
-import { Client } from './Client';
+import { Client, ApprovalStatus } from './Client';
 
-export { Client };
+export { Client, ApprovalStatus };
