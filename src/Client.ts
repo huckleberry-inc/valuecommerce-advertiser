@@ -48,7 +48,7 @@ type TransactionResponse = {
       customerStatus: string | null; // TODO
       itemPriceTotal: string;
       itemQuantity: string;
-      orderDate: string;
+      orderDate: string; // JST yyyy-mm-dd hh:ii:ss
       orderId: string;
       programName: string;
       updDate: string;
