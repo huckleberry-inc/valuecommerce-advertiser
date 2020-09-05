@@ -1,6 +1,6 @@
 {
   "name": "@huckleberry-inc/valuecommerce-advertiser",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "ValueCommerce node client for advertiser",
   "author": "Huckleberry, inc. <dev@huckleberry-inc.com>",
   "license": "MIT",
