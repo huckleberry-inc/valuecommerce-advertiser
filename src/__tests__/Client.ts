@@ -9,10 +9,10 @@ const clientSecret = 'CLIENT_SECRET';
 const bearerToken = '69449c99-d35e-4e9b-b2ae-9ab21b4d00d3';
 const orderId = 'vc_72da64e066f07_Fw3pMB7p41JBsKxl8xGi';
 
-const client = new Client({ clientKey, clientSecret });
+const client = new Client();
 
 test('returns token', async () => {
-  const token = await client.token();
+  const token = await client.token({ clientKey, clientSecret });
 
   expect(token.resultSet.rowData.bearer_token).toBe(bearerToken);
 });
