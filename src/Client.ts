@@ -75,25 +75,16 @@ type TransactionStatusResponse = {
 };
 
 export class Client {
-  clientKey: string;
-
-  clientSecret: string;
-
-  constructor({
+  async token({
     clientKey,
     clientSecret,
   }: {
     clientKey: string;
     clientSecret: string;
-  }) {
-    this.clientKey = clientKey;
-    this.clientSecret = clientSecret;
-  }
-
-  async token(): Promise<TokenResponse> {
-    const accessToken = Buffer.from(
-      `${this.clientKey}|${this.clientSecret}`,
-    ).toString('base64');
+  }): Promise<TokenResponse> {
+    const accessToken = Buffer.from(`${clientKey}|${clientSecret}`).toString(
+      'base64',
+    );
     const params = stringify({
       grant_type: 'client_credentials',
     });
@@ -121,7 +112,6 @@ export class Client {
     );
   }
 
-  // TODO: add params option
   transactionStatus(
     bearerToken: string,
     statusSet: Map<string, boolean>,
@@ -153,10 +143,10 @@ export class Client {
 
   // eslint-disable-next-line class-methods-use-this
   private async request<T>(url: string, option: RequestInit) {
-    const response = await fetch(url, option).catch(() => {
+    const response = await fetch(url, option).catch((e) => {
       // TODO: error handling
 
-      throw new Error();
+      throw e;
     });
 
     return (await response.json()) as T;
