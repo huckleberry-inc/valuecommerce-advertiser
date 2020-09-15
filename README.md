@@ -12,16 +12,18 @@
 ```ts
 import { Client } from '@huckleberry-inc/valuecommerce-advertiser'
 
-const clientKey = 'CLIENT_KEY';
-const clientSecret = 'CLIENT_SECRET';
-const client = new Client({ clientKey, clientSecret });
+const client = new Client();
 
 (async () => {
   // Create Token
-  const token = await client.token();
+  const clientKey = 'CLIENT_KEY';
+  const clientSecret = 'CLIENT_SECRET';
+  const token = await client.token({ clientKey, clientSecret });
+
+  const bearerToken = token.resultSet.rowData.bearer_token
 
   // Fetch transactions
-  const transactions = await client.transaction(token.resultSet.rowData.bearer_token);
+  const transactions = await client.transaction(bearerToken);
 
   // Update transaction's status
   const statusMap = new Map<string, boolean>();
