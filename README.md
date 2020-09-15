@@ -5,6 +5,8 @@
 
 > ValueCommerce node client for advertiser
 
+[API docs](https://pub-docs.valuecommerce.ne.jp/docs/ec-74-token-api/)
+
 ### 🏠 [Homepage](https://github.com/huckleberry-inc/valuecommerce-advertiser)
 
 ## Usage
