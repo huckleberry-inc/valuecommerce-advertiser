@@ -28,9 +28,10 @@
     "@huckleberry-inc/prettier-config": "^0.0.6",
     "@types/babel__preset-env": "^7.9.0",
     "@types/jest": "^26.0.10",
+    "@types/nock": "^11.1.0",
     "@types/node-fetch": "^2.5.7",
     "jest": "^26.4.1",
-    "sepia": "^2.0.2",
+    "nock": "^13.0.4",
     "typescript": "^3.8.3"
   },
   "dependencies": {
