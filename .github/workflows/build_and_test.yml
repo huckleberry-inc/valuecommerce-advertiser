@@ -18,4 +18,4 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: yarn install
       - run: yarn build
-      - run: VCR_MODE=cache yarn test
+      - run: yarn test

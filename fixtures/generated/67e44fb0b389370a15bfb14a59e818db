@@ -1,1 +1,0 @@
-{"resultSet":{"responseInfo":{"numberOfResult":1,"nextOffset":-1,"responseTime":"2020-06-19 12:20:22"},"requestInfo":{"query":"grant_type=client_credentials","requestTime":"2020-06-19 12:20:22"},"rowData":{"bearer_token":"69449c99-d35e-4e9b-b2ae-9ab21b4d00d3"}}}
